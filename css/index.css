@@ -1,9 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+
 body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-image: url("../images/loader.gif");
+    font-family: "Quicksand";
+    line-height: 1;
+    font-stretch: extra-expanded;
 }
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .form,
 .greetings {
     display: none;
@@ -24,9 +39,81 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
     z-index: -1;
     background-size: cover;
     animation: fadeIn 0.3s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.contents-wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.clock .clock-text {
+    color: #fafafa;
+    font-size: 7em;
+    margin: 0;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+.clock .clock-text > span {
+    font-size: 0.4em;
+    margin-left: 0.2em;
+    opacity: 0.8;
+    text-shadow: 0 0 transparent;
+}
+input[type="text"] {
+    border: 2px #fff solid;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.5em;
+    margin-bottom: 0.3em;
+    border-radius: 2em;
+    font-size: 1.2em;
+    text-align: center;
+    width: 15em;
+}
+
+input[type="text"]::placeholder {
+    color: #222;
+}
+input[type="text"]:focus {
+    outline: transparent;
+}
+
+input[name="todo"] {
+    margin-bottom: 1.5em;
+}
+
+.greetings {
+    color: #fafafa;
+    font-size: 3.5em;
+    margin: 0 auto 0.5em;
+}
+.greetings > span {
+    font-style: italic;
+}
+
+.to-do-list li {
+    margin-bottom: 1em;
+    color: #fff;
+    text-align: center;
+}
+.to-do-list li button {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+}
+.to-do-list li span {
+    font-size: 1.5em;
+    text-shadow: 2px 1px rgba(0, 0, 0, 0.2);
+}
+.to-do-list li:hover button {
+    display: inline-block;
 }
