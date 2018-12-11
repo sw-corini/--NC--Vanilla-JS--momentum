@@ -66,11 +66,14 @@ section.contents-wrap {
     opacity: 0.8;
     text-shadow: 0 0 transparent;
 }
+.clock + .js-form {
+    margin-top: 2em;
+}
 input[type="text"] {
     border: 2px #fff solid;
     background: rgba(255, 255, 255, 0.5);
     padding: 0.5em;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.5em;
     border-radius: 2em;
     font-size: 1.2em;
     text-align: center;
